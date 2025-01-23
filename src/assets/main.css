@@ -1,8 +1,11 @@
-@import './base.css';
-
 #app {
   margin: 0 auto;
   font-weight: normal;
   width: 100%;
 }
-
+a {
+  /* text-decoration: none; */
+  padding: 3px;
+  transition: 0.4s;
+  color: black;
+}
