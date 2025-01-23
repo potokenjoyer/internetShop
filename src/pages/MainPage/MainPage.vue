@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1> privet! </h1>
+        <h1> Mainpage </h1>
     </div>
 </template>
 <script setup>
