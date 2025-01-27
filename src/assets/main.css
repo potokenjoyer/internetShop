@@ -3,9 +3,8 @@
   font-weight: normal;
   width: 100%;
 }
-a {
-  /* text-decoration: none; */
-  padding: 3px;
-  transition: 0.4s;
-  color: black;
+a:hover {
+  cursor: pointer;
 }
+
+
