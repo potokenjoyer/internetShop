@@ -8,16 +8,17 @@
         О НАС
       </el-link>
     </div>
+
     <div class="header-right-menu">
       <div>
-        <el-link @click="$router.push('/order')" :underline="false">
+        <el-link :underline="false">
           <el-icon style="font-size: 30px; margin-right: 2rem">
             <Search />
           </el-icon>
         </el-link>
 
         <!-- Тут заменить надо на страницу пользователя, пока её не сделал -->
-        <el-link @click="$router.push('/user')" :underline="false">
+        <el-link @click="$router.push('/login')" :underline="false">
           <el-icon style="font-size: 30px; margin-right: 2rem">
             <User />
           </el-icon>
@@ -50,10 +51,10 @@ import { ShoppingBag, User, Search } from "@element-plus/icons-vue";
 .navigation {
   display: flex;
   width: 40%;
-  height: 100%;
+  height: 10%;
   align-items: center;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 18px; 
 }
 .header-right-menu {
   display: flex;
