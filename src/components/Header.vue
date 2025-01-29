@@ -1,13 +1,18 @@
 <template>
   <div class="header">
-    <div class="navigation">
-      <h1 style="margin-left: 5%">logotip</h1>
-      <el-link :underline="false"> МЕНЮ </el-link>
-      <el-link @click="$router.push('/')" :underline="false"> КАТАЛОГ </el-link>
-      <el-link @click="$router.push('/about')" :underline="false">
-        О НАС
-      </el-link>
-    </div>
+    <el-link
+      @click="$router.push('/about')"
+      :underline="false"
+      style="margin-left: 50px; font-size: 30px"
+    >
+      О НАС
+    </el-link>
+    <img
+      src="/public/AMII.svg"
+      alt="logo"
+      @click="$router.push('/')"
+      class="img_link"
+    />
 
     <div class="header-right-menu">
       <div>
@@ -16,8 +21,6 @@
             <Search />
           </el-icon>
         </el-link>
-
-        <!-- Тут заменить надо на страницу пользователя, пока её не сделал -->
         <el-link @click="$router.push('/login')" :underline="false">
           <el-icon style="font-size: 30px; margin-right: 2rem">
             <User />
@@ -43,22 +46,15 @@ import { ShoppingBag, User, Search } from "@element-plus/icons-vue";
 .header {
   width: 100%;
   display: flex;
-  height: 100%;
+  height: 110px;
+  margin: 0 auto;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid black;
 }
-.navigation {
-  display: flex;
-  width: 40%;
-  height: 10%;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 18px; 
-}
 .header-right-menu {
   display: flex;
-  margin-right: 5%;
+  margin-right: 50px;
 }
 .el-link {
   font-size: 24px;
@@ -68,5 +64,8 @@ import { ShoppingBag, User, Search } from "@element-plus/icons-vue";
 .el-link:hover {
   color: black;
   text-decoration: underline black 1px;
+}
+.img_link:hover {
+  cursor: pointer;
 }
 </style>
