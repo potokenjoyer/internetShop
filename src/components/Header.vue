@@ -5,7 +5,7 @@
       :underline="false"
       style="margin-left: 50px; font-size: 30px"
     >
-      О НАС
+     about
     </el-link>
     <img
       src="/public/AMII.svg"
@@ -44,13 +44,14 @@ import { ShoppingBag, User, Search } from "@element-plus/icons-vue";
 
 <style scoped>
 .header {
-  width: 100%;
+  width: 95%;
   display: flex;
   height: 110px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
 }
 .header-right-menu {
   display: flex;
@@ -68,4 +69,5 @@ import { ShoppingBag, User, Search } from "@element-plus/icons-vue";
 .img_link:hover {
   cursor: pointer;
 }
+
 </style>
