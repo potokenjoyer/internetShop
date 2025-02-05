@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <div style="margin: auto;">
+    <div style="margin: auto">
       <h1 class="auth">Авторизация</h1>
       <el-input v-model="loginInput" placeholder="Введите логин" />
       <el-input
@@ -9,22 +9,28 @@
         show-password
         placeholder="Введите пароль"
       />
-      <button>
-        Вход
-    </button>
+      <button @click="AuthUser">Вход</button>
     </div>
-
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import router from "@/router";
 
 const loginInput = ref("");
 const passInput = ref("");
+
+
+function AuthUser() {
+
+  if (loginInput.value && passInput.value === "123") {
+    router.push("/user");
+  }
+}
 </script>
 
-<style>
+<style scoped>
 .wrapper {
   width: 30%;
   border: 1px solid black;
@@ -33,7 +39,6 @@ const passInput = ref("");
   display: flex;
 }
 .el-input {
-    margin-top: 5%;
-    
+  margin-top: 5%;
 }
 </style>

@@ -1,21 +1,20 @@
 <template>
   <div class="header">
-    <el-link
-      @click="$router.push('/about')"
-      :underline="false"
-      style="margin-left: 50px; font-size: 30px"
-    >
-     about
-    </el-link>
+    <span class="left_side_menu">
+      <el-link @click="$router.push('/about')" :underline="false">
+        About
+      </el-link>
+    </span>
+<div class="logo_container">
     <img
       src="/public/AMII.svg"
       alt="logo"
       @click="$router.push('/')"
       class="img_link"
     />
-
+  </div>
     <div class="header-right-menu">
-      <div>
+      <div class="right_side_menu">
         <el-link :underline="false">
           <el-icon style="font-size: 30px; margin-right: 2rem">
             <Search />
@@ -26,8 +25,6 @@
             <User />
           </el-icon>
         </el-link>
-      </div>
-      <div>
         <el-link @click="$router.push('/order')" :underline="false">
           <el-icon style="font-size: 30px">
             <ShoppingBag />
@@ -50,8 +47,7 @@ import { ShoppingBag, User, Search } from "@element-plus/icons-vue";
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 8px;
+  border-bottom: 1px solid rgb(170, 170, 170);
 }
 .header-right-menu {
   display: flex;
@@ -62,12 +58,34 @@ import { ShoppingBag, User, Search } from "@element-plus/icons-vue";
   font-weight: 300;
   color: black;
 }
+
+.left_side_menu {
+  display: flex;
+  margin-left: 50px;
+  font-size: 30px;
+  font-family: IBM Plex Sans;
+  font-weight: 300;
+  width: 200px;
+  justify-content: left;
+}
+.right_side_menu{
+  display: flex;
+  margin-right: 50px;
+  width: 200px;
+  justify-content: right;
+}
+.logo_container{
+  display: flex;
+
+  justify-content: center;
+}
+
 .el-link:hover {
   color: black;
   text-decoration: underline black 1px;
 }
+
 .img_link:hover {
   cursor: pointer;
 }
-
 </style>
